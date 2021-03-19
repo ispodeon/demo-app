@@ -53,4 +53,22 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <pre *ngIf="finished; else loading" class="card-text">
+                        {{weather | json}}
+                    </pre>
+                    <ng-template #loading>
+                        <div class="spinner-border m-5 card-text" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
