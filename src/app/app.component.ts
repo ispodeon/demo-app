@@ -13,6 +13,8 @@ export class AppComponent implements OnInit, OnDestroy{
   collapse = true;
   finished = false;
 
+  selected = 1;
+
   weather: Weather | undefined;
 
   weatherSubscription: Subscription = new Subscription;

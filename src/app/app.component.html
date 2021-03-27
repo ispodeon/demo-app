@@ -30,6 +30,53 @@
     </div>
 </nav>
 <div style="position: relative; top: 70px;" class="container">
+    <div class="row from_top">
+        <div class="col-6">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Header</div>
+                <div class="card-body">
+                    <h5 class="card-title">Dark card title</h5>
+                    <pre *ngIf="finished; else loading" class="card-text">
+                        {{weather | json}}
+                    </pre>
+                    <ng-template #loading>
+                        <div class="spinner-border m-5 card-text" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="list-group">
+                <!-- <a href="#" class="list-group-item list-group-item-action active" aria-current="true"> -->
+                <a href="#" class="list-group-item list-group-item-action" (click)="selected = 1" [class.active]="selected === 1" aria-current="true">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small>3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small>And some small print.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" (click)="selected = 2" [class.active]="selected === 2">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action" (click)="selected = 3" [class.active]="selected === 3">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    <small class="text-muted">And some muted small print.</small>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-6">
             <button class="btn btn-success">Hello World!</button>
@@ -53,22 +100,5 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Dark card title</h5>
-                    <pre *ngIf="finished; else loading" class="card-text">
-                        {{weather | json}}
-                    </pre>
-                    <ng-template #loading>
-                        <div class="spinner-border m-5 card-text" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                    </ng-template>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
