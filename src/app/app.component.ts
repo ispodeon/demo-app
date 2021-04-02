@@ -27,9 +27,15 @@ export class AppComponent implements OnInit, OnDestroy{
     this.weatherSubscription = 
     this.weatherService.getWeather().subscribe(
       (data:Weather) => { console.log(data); this.weather = data;},
-      error => {},
+      () => {},
       () => {this.finished = true;}
     );
+    // this.weatherSubscription = this.weatherService.getWeather().subscribe(
+    //   (data: string) => {console.log(data);},
+    //   () => {},
+    //   () => {console.log('finished');
+    //   }
+    // );
   }
 
   ngOnDestroy(){
