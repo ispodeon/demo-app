@@ -1,0 +1,7 @@
+<div class="col-12">
+    <div class="row">
+        <div class="col-1"></div>
+        <app-profile-card class="col-3" [image]="'../assets/example-work0' +(i+1)+ '.jpg'" [title]="profile" *ngFor="let profile of titles; let i = index"></app-profile-card>
+        <div class="col-1"></div>
+    </div>
+</div>

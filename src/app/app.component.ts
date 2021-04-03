@@ -28,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy{
     this.weatherService.getWeather().subscribe(
       (data:Weather) => { console.log(data); this.weather = data;},
       () => {},
-      () => {this.finished = true;}
+      () => {this.finished = true; console.log('finished');}
     );
     // this.weatherSubscription = this.weatherService.getWeather().subscribe(
     //   (data: string) => {console.log(data);},
