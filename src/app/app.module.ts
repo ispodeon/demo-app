@@ -10,13 +10,15 @@ import { HomeComponent } from './home/home.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { ProfileExampleComponent } from './profile-example/profile-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileCardComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ProfileExampleComponent
   ],
   imports: [
     BrowserModule,
