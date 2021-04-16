@@ -14,6 +14,8 @@ $body-color: #111;
 $card-color: $white;
 $card-bg: gray;
 $card-height: 100%;
+$btn-link-color: red;
+$btn-font-size: 60sp;
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
@@ -22,6 +24,7 @@ $card-height: 100%;
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
 @import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/buttons";
 // 5. Add additional custom code here
 footer {
     background-color: grey;
