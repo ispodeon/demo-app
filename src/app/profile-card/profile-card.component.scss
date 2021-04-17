@@ -1,0 +1,7 @@
+@mixin redColor {
+    color: var(--bs-ryan-color);
+}
+
+button {
+    @include redColor;
+}

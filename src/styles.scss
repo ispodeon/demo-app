@@ -11,11 +11,15 @@ $body-color: #111;
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
+// Create your own map
+$custom-colors: ( "ryan-color": #900);
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
 $card-color: $white;
 $card-bg: gray;
 $card-height: 100%;
-$btn-link-color: red;
-$btn-font-size: 60sp;
+$btn-font-size: 26px;
+$btn-border-radius: 16px;
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
@@ -26,6 +30,9 @@ $btn-font-size: 60sp;
 @import "../node_modules/bootstrap/scss/card";
 @import "../node_modules/bootstrap/scss/buttons";
 // 5. Add additional custom code here
+
+/* -------------------------------------------------------------------------------- */
+
 footer {
     background-color: grey;
     margin-top: 70px;

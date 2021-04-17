@@ -21,7 +21,10 @@ export class HomeComponent implements OnInit {
   titles: string[] = [
     "Dashboard template",
     "Text-heavy website",
-    "Ex officia laborum"
+    "Ex officia laborum",
+    "Stand-alone article",
+    "MDL website",
+    "Consequat ut quis"
   ];
   descriptions: string[] = [];
   images: string[] = [];
