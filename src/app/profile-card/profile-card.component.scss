@@ -1,7 +1,15 @@
+@mixin button-variant( $background) {
+    background-color: $background;
+}
+
 @mixin redColor {
     color: var(--bs-ryan-color);
 }
 
 button {
-    @include redColor;
+    // @include redColor;
+}
+
+.btn-new {
+    @include button-variant($background: #bada55)
 }

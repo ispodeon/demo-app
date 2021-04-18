@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { AppHTTPService } from './app-http.service';
 import { Weather } from './weather-data';
@@ -19,6 +19,8 @@ export class AppComponent implements OnInit, OnDestroy{
 
   weatherSubscription: Subscription = new Subscription;
 
+  @ViewChild('modal') modal: HTMLDivElement | undefined;
+
   constructor(private weatherService: AppHTTPService){
 
   }
@@ -36,9 +38,17 @@ export class AppComponent implements OnInit, OnDestroy{
     //   () => {console.log('finished');
     //   }
     // );
+    
   }
 
   ngOnDestroy(){
     this.weatherSubscription.unsubscribe();
+  }
+
+  buttonClicked(modalClick:HTMLDivElement){
+    this.modal = modalClick;
+    console.log(this.modal);
+
+    this.modal.addEventListener('hide.bs.modal', () => {console.log('told you ')})
   }
 }

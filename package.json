@@ -25,6 +25,7 @@
     "@schematics/angular": "^11.2.9",
     "@schematics/update": "^0.1102.9",
     "bootstrap": "^5.0.0-beta2",
+    "ngx-bootstrap": "^6.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

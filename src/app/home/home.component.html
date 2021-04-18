@@ -1,10 +1,8 @@
-<div class="col-12">
-    <div class="row row-cols-3">
-        <!-- 
-            <div class="col-1"></div>
-            <app-profile-card class="col-3" [image]="'../assets/example-work0' +(i+1)+ '.jpg'" [title]="profile" *ngFor="let profile of titles; let i = index"></app-profile-card>
-            <div class="col-1"></div> 
-        -->
-        <app-profile-card style="margin-bottom: 22px;" class="col" [image]="'../assets/example-work0' +(i+1)+ '.jpg'" [title]="profile" *ngFor="let profile of titles; let i = index"></app-profile-card>
-    </div>
+<div class="row row-cols-3">
+    <!-- 
+        <div class="col-1"></div>
+        <app-profile-card class="col-3" [image]="'../assets/example-work0' +(i+1)+ '.jpg'" [title]="profile" *ngFor="let profile of titles; let i = index"></app-profile-card>
+        <div class="col-1"></div> 
+    -->
+    <app-profile-card style="margin-bottom: 22px;" class="col" [image]="'../assets/example-work0' +(i+1)+ '.jpg'" [title]="profile" *ngFor="let profile of titles; let i = index"></app-profile-card>
 </div>

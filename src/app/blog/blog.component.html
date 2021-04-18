@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-12">
+        <div (click)="$event.preventDefault()">
+            <p>Change quantity of tabs by manipulating tabs array</p>
+            <button type="button" class="btn btn-primary btn-sm" (click)="addNewTab()">
+              Add new tab
+            </button>
+            <button type="button" class="btn btn-primary btn-sm" (click)="tabs = []" *ngIf="tabs.length">
+              Remove all tabs
+            </button>
+            <hr/>
+            <tabset type="pills">
+                <tab heading="Static title">Static content</tab>
+                <tab *ngFor="let tabz of tabs" [heading]="tabz.title" [active]="tabz.active" (selectTab)="tabz.active = true; onSelect($event)" (deselect)="tabz.active = false" [disabled]="tabz.disabled" [removable]="tabz.removable" (removed)="removeTabHandler(tabz)"
+                    [customClass]="tabz.customClass">
+                    {{tabz?.content}}
+                </tab>
+            </tabset>
+        </div>
+    </div>
+    <div class="col-12">
+        <alert type="md-color">
+            <strong>Well done!</strong> You successfully read this important alert message.
+        </alert>
+        <alert type="success">
+            <strong>Well done!</strong> You successfully read this important alert message.
+        </alert>
+        <alert type="info">
+            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+        </alert>
+        <alert type="warning">
+            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+        </alert>
+        <alert type="danger">
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+        </alert>
+    </div>
+</div>
