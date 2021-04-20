@@ -23,6 +23,8 @@ $btn-font-size: 26px;
 $btn-border-radius: 16px;
 $alert-padding-y: 20px;
 $progress-bar-bg: black;
+$progress-font-size: 20px;
+$nav-pills-link-active-bg: red;
 // 4. Include any optional Bootstrap components as you like
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
@@ -35,6 +37,7 @@ $progress-bar-bg: black;
 @import "../node_modules/bootstrap/scss/modal";
 @import "../node_modules/bootstrap/scss/alert";
 @import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/nav";
 // 5. Add additional custom code here
 
 /* -------------------------------------------------------------------------------- */
